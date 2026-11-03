@@ -3,3 +3,5 @@ e trabalhando com o dom virtual na memoria
 .render:Renderiza os elementos que vc quer dentro da sua div
 metodo:reactDOM.render(<p>O parametro que vai ser ejetado.aparecer na minha pagina<p/>, (document.getElementById("root") aonde vai ser mostrado oq foi ejetado)
 Atribuir class: para atribuit uma class no js, se utliza className <h1 className="seila"></h1>
+o react aceita expressoes dentro: let nome = usuario_nome const titulo = <p>Ola {nome}</p>
+se tiver mais de um elemento filho tem que usar uma div
