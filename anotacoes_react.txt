@@ -1,0 +1,5 @@
+Pra que aprender react? Estrutura organizada dos componentese fica mais organizado
+e trabalhando com o dom virtual na memoria
+.render:Renderiza os elementos que vc quer dentro da sua div
+metodo:reactDOM.render(<p>O parametro que vai ser ejetado.aparecer na minha pagina<p/>, (document.getElementById("root") aonde vai ser mostrado oq foi ejetado)
+Atribuir class: para atribuit uma class no js, se utliza className <h1 className="seila"></h1>
