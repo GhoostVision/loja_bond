@@ -1,5 +1,5 @@
 
-
+/*
 function Card(props){
     return(
         <div>
@@ -38,3 +38,4 @@ ReactDOM.render(
     <App/>,
     document.getElementById(`root`)
 )
+*/
