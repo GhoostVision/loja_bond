@@ -1,7 +1,33 @@
 Pra que aprender react? Estrutura organizada dos componentese fica mais organizado
 e trabalhando com o dom virtual na memoria
+
 .render:Renderiza os elementos que vc quer dentro da sua div
+
 metodo:reactDOM.render(<p>O parametro que vai ser ejetado.aparecer na minha pagina<p/>, (document.getElementById("root") aonde vai ser mostrado oq foi ejetado)
+
 Atribuir class: para atribuit uma class no js, se utliza className <h1 className="seila"></h1>
 o react aceita expressoes dentro: let nome = usuario_nome const titulo = <p>Ola {nome}</p>
 se tiver mais de um elemento filho tem que usar uma div
+
+Componentes e props: para criar um compnente se usa function um nome e o props e o () nele
+function Card(props){ -> Nao esquecer de comecar em maiusculo para o react identificar que nao e uma tag html
+    return(
+        <div>
+            <img src={props.imgJogo}></img>
+            <h2>{props.nomeJogo}</h2>
+            <p>{props.precoJogo}</p>
+            <button>Comprar</button>
+        </div>
+    ) 
+}
+
+agora se faz assim
+
+ReactDOM.render(
+    <Card
+    imgJogo="url da imagem sei la"
+    nomeJogo="Resident Evil"
+    precoJogo="R$ 70,00" 
+    />,
+    document.getElementById(`root`)
+)
