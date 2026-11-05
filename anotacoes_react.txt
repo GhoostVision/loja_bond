@@ -31,3 +31,8 @@ ReactDOM.render(
     />,
     document.getElementById(`root`)
 )
+
+Conceito de state: Como criar um state 
+function Contador(props){
+ const [const, setConst] = react.useState(0)
+}

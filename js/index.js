@@ -1,41 +1,27 @@
+function Contador(props){
+    const [numero, setNumero] = React.useState(0)
 
-/*
-function Card(props){
+    function add(){
+        setNumero(numero + 1)
+    }
+
+    function remov(){
+        setNumero(numero - 1)
+    }
+
+    if(numero == -1){
+        setNumero(0)
+    }
+
     return(
         <div>
-            <img src={props.imgJogo}></img>
-            <h2>{props.nomeJogo}</h2>
-            <p>{props.precoJogo}</p>
-            <button>Comprar</button>
-        </div>
-    )
-    
-}
-
-function App(){
-    return(
-        <div>
-            <Card
-            imgJogo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnOXAQFE6SWdIZy6b4OpXDWYJUjkIbnYx7gQLCRunJ3w&s=10"
-            nomeJogo="Resident Evil 4 Remake" 
-            precoJogo="R$ 300,00"
-            />
-            <Card 
-            imgJogo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLwc_PvfaJ8fh9ZI9j9m3qhz0QOmx8ztGpRdMLDvsSAw&s=10"
-            nomeJogo="Resident Evil 5" 
-            precoJogo="R$ 90,00"
-            />
-            <Card 
-            imgJogo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7SVOheQdlgUAZLkXmscXCD-m6gclSYy_An33yZAzk-w&s=10"
-            nomeJogo="Resident Evil 6" 
-            precoJogo="R$ 130,00"
-            />
+            <p>Curtidas: {numero}</p>
+            <button onClick={add}>curtir</button>
+            <button onClick={remov}>Remover curtida</button>
         </div>
     )
 }
 
-ReactDOM.render(
-    <App/>,
-    document.getElementById(`root`)
-)
-*/
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<Contador />);
