@@ -33,6 +33,26 @@ ReactDOM.render(
 )
 
 Conceito de state: Como criar um state 
-function Contador(props){
- const [const, setConst] = react.useState(0)
-}
+function Contador(props){ Contador e o nome da fuction que armazena o state
+ const [const, setConst] = react.useState(0)  o const pode ser substituido por outro nome, mas ele e o elemento que vai ser atualizado
+                                             setConst e meio que a atualizacao dele e o useState e o valor inicial e o negogio que mandar o jsx alterar na tela
+    function add(){
+        setNumero(numero + 1) atualizando o numero para adicionar 1 no numero
+    }
+
+    function remov(){
+        setNumero(numero - 1) atualizando o numero para -1 no numero
+    }
+
+    if(numero == -1){
+        setNumero(0) se o numero for igual a -1 o atualizador vai mandar o numero para 0
+    }
+
+    return(
+        <div>
+            <p>Curtidas: {numero}</p> exibir o numero e o valor dele
+            <button onClick={add}>curtir</button> adicionar 1 curtida
+            <button onClick={remov}>Remover curtida</button> remover curtida
+        </div>
+    )
+}                                            
