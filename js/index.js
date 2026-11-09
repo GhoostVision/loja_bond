@@ -1,27 +1,48 @@
-function Contador(props){
-    const [numero, setNumero] = React.useState(0)
+
+function Carrinho(props){
+    const [valorTotal, setValortotal] = React.useState(0)
+    const [carrinho, setCarrinho] = React.useState(0)
+
+    React.useEffect(()=>{
+        document.title = `Carrinho: ${carrinho}`
+    })
+
 
     function add(){
-        setNumero(numero + 1)
+        setCarrinho(carrinho + 1)
+        setValortotal(valorTotal + 50)
     }
 
     function remov(){
-        setNumero(numero - 1)
+        if(carrinho > 0){
+        setCarrinho(carrinho - 1)
+        }
+
+        if(valorTotal > 0){
+            setValortotal(valorTotal - 50)
+        }
     }
 
-    if(numero == -1){
-        setNumero(0)
+    if(carrinho > 5){
+        return <div>
+            <h2>Estoque limitado</h2>
+            <button disabled >Adicionar ao carrinho</button>
+            <button onClick={remov}>Remover do carrinho</button>
+        </div>
     }
+
 
     return(
         <div>
-            <p>Curtidas: {numero}</p>
-            <button onClick={add}>curtir</button>
-            <button onClick={remov}>Remover curtida</button>
+            <h2>Total no carrinho: {carrinho == 0 ? <span>Voce ainda nao possui nenhum item</span>: carrinho}</h2>
+            <p>Valor total: {valorTotal}</p>
+            <button onClick={add}>Adicionar ao carrinho</button>
+            <button onClick={remov}>Remover do carrinho</button>
         </div>
     )
+
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Contador />);
+root.render(<Carrinho />);

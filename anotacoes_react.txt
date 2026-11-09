@@ -55,4 +55,38 @@ function Contador(props){ Contador e o nome da fuction que armazena o state
             <button onClick={remov}>Remover curtida</button> remover curtida
         </div>
     )
-}                                            
+}  
+
+effect hook: e algo que acontece quando react atualiza o dom, muito utilizado para fazer aqueles efeitos no tittle, tipo, carrinho, loja, pergunats e tals
+    window.alert(`Poola`) ->Escolher oq ele vai fazer qaundo aquilo for alterado
+},[numero]) -> Escolher em que estado que ele vai mudar, no caso quando mudar o numero
+[] com o array vazio ele so ativa quando o componente e gerado
+
+RENDERIZACAO CONDICIONAL: Sao regras de if else praticamente
+if(numero >= 10){ -> quando chegar a 10, ele vai aprecer isso e apagas os outros elementos
+        return(
+            <h2>Opssss</h2>
+        )
+    }
+
+    function add(){
+        setNumero(numero + 1)
+    }
+
+    function remov(){
+        if(numero > 0){
+        setNumero(numero - 1)
+        }
+    }
+
+
+    return(
+        <div>
+            <p>Curtidas: {numero}</p>
+            <button onClick={add}>curtir</button>
+            <button onClick={remov}>Remover curtida</button>
+        </div>
+    )
+    
+Explesao de if else inline:{condicao ? true : false}
+<h2>Contado{numero > 8 ? <p>Vai explodir neguinho</p>: numero}</h2>
