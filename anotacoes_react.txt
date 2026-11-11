@@ -58,8 +58,10 @@ function Contador(props){ Contador e o nome da fuction que armazena o state
 }  
 
 effect hook: e algo que acontece quando react atualiza o dom, muito utilizado para fazer aqueles efeitos no tittle, tipo, carrinho, loja, pergunats e tals
-    window.alert(`Poola`) ->Escolher oq ele vai fazer qaundo aquilo for alterado
-},[numero]) -> Escolher em que estado que ele vai mudar, no caso quando mudar o numero
+    React.useEffect(()=>{
+        document.title ->Escolher oq ele vai fazer qaundo aquilo for alterado
+    }) 
+,[numero]) -> Escolher em que estado que ele vai mudar, no caso quando mudar o numero
 [] com o array vazio ele so ativa quando o componente e gerado
 
 RENDERIZACAO CONDICIONAL: Sao regras de if else praticamente
