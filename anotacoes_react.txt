@@ -92,3 +92,20 @@ if(numero >= 10){ -> quando chegar a 10, ele vai aprecer isso e apagas os outros
     
 Explesao de if else inline:{condicao ? true : false}
 <h2>Contado{numero > 8 ? <p>Vai explodir neguinho</p>: numero}</h2>
+
+LISTA E CHAVES: Para fazer uma funcao de para achar um jogo por exemplo e exibir 
+    const jogos = [ -> o array com a key sendo id para conseguir saber qaul e o elemento e nao ocorrer bugs e tambem os elemento do produto
+    {id: 1, nome: "Resident Evil 4", preco: 120, categoria: "Terror"},
+    {id: 2, nome: "Minecraft", preco: 90, categoria: "Sobrevivência"},
+    {id: 3, nome: "The Forest", preco: 45, categoria: "Terror"},
+    {id: 4, nome: "Cyberpunk 2077", preco: 100, categoria: "RPG"},
+    {id: 5, nome: "Frostpunk", preco: 35, categoria: "Estratégia"}
+    ]
+
+    const ExibirJogos = jogos.map((jogo)=> -> funcao map para pecorrer o array e indo achando as informcoes e o (jogo) e para representar um objeto, com .id consgeue distinguir eles de outro objeto
+    <div key={jogo.id.toString()}>
+        <h2>{jogo.nome}</h2>
+        <p>{jogo.preco}</p>
+        <p>{jogo.categoria}</p>
+        <button>Comprar</button>
+    </div>)

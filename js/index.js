@@ -1,49 +1,28 @@
+function  App(params) {
+    const jogos = [
+    {id: 1, nome: "Resident Evil 4", preco: 120, categoria: "Terror"},
+    {id: 2, nome: "Minecraft", preco: 90, categoria: "Sobrevivência"},
+    {id: 3, nome: "The Forest", preco: 45, categoria: "Terror"},
+    {id: 4, nome: "Cyberpunk 2077", preco: 100, categoria: "RPG"},
+    {id: 5, nome: "Frostpunk", preco: 35, categoria: "Estratégia"}
+    ]
 
-function Post(){
-    const [curtidas,setCurtidas] = React.useState(0)
-    const [comentarios,setComentarios] = React.useState(0)
+    const ExibirJogos = jogos.map((jogo)=>
+    <div key={jogo.id.toString()}>
+        <h2>{jogo.nome}</h2>
+        <p>{jogo.preco}</p>
+        <p>{jogos.categoria}</p>
+        <button>Comprar</button>
+    </div>)
 
-    React.useEffect(()=>{
-        document.title = `Publicacao| ${curtidas}`
-    }, [curtir])
-
-    function curtir(){
-        setCurtidas(curtidas + 1)
-    }
-
-    function removCurtir(){
-        setCurtidas(curtidas - 1)
-    }
-
-    if(curtidas == -1){
-        setCurtidas(0)
-    }
-
-    function comentar(){
-        setComentarios(comentarios + 1)
-    }
-
-    function removComentar(){
-        setComentarios(comentarios - 1)
-    }
-
-    if(comentarios == -1){
-        setComentarios(0)
-    }
-
-
-    return <div>
-        <h3>Maria Sousa</h3>
-        <p>Olha meu bolinho de hj pessoal</p>
-        <span> Curtidas:{curtidas == 0 ? `Ainda nao possui curtidas`: curtidas} </span>
-        <span> Comentarios: {comentarios == 0 ? `ainda nao pussi comenatrios` : comentarios} </span>
-        <button onClick={curtir}>+ Coracao</button>
-        <button onClick={removCurtir}>- Coracao</button>
-        <button onClick={comentar}>+ Comentar</button>
-        <button onClick={removComentar}>- Comentar</button>
-    </div>
+    return <>
+     <h1>Game Hub</h1>
+     <p>Melhores jgos aqui</p>
+     {ExibirJogos}
+    </>
 }
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Post />);
+root.render(< App/>);
