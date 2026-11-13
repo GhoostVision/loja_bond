@@ -1,0 +1,11 @@
+boostrap ja tem algumas cores prontas, dark, primary e tals, tudo isso as vezes vem no elemento
+ pronto do boostrap
+
+Container e grid:
+container -> Deixa os elementos com uma margin aos lado, mas quando chega para celular essa margin some e fica 100%
+container-fluid-> Deixa o elemento100% do tamanho da tela
+row -> Serve para criar as colunas, uma funcao interessante nele e row-cols-4 que da para escolher qunatas colunas vai ter na tela
+col -> Escolhe qaunto de espacamento aquele elemento vao ter, se vc usar col ele ja ficam padrao, se vc escolher col-1 ai vc ja escolhe o tamanho deles
+col-lg -> Escolhe o tamanho para telas grandes computadores e tals
+col-md -> Escolhe o tamanho para celular
+col-sm -> Serve para celulares pequenos

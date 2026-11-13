@@ -1,3 +1,8 @@
-.color{
-    color: red;
+header{
+    background: red;
+    height: 30px;
+}
+
+div{
+    height: 20px;
 }

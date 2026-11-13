@@ -109,3 +109,21 @@ LISTA E CHAVES: Para fazer uma funcao de para achar um jogo por exemplo e exibir
         <p>{jogo.categoria}</p>
         <button>Comprar</button>
     </div>)
+
+IMPORT E EXPORT: Para exporta um arquivo jsx faz assim
+export function Navbar(){
+    return <>
+      <nav>Ola</nav>
+    </>
+}
+e para utilizar ele em outro lugar
+import { Navbar } from './components/navbar'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Navbar />
+  </StrictMode>,
+)
+arquivo css e so fazer assim
+
+import './nav.css'
