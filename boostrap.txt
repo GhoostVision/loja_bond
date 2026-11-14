@@ -9,3 +9,22 @@ col -> Escolhe qaunto de espacamento aquele elemento vao ter, se vc usar col ele
 col-lg -> Escolhe o tamanho para telas grandes computadores e tals
 col-md -> Escolhe o tamanho para celular
 col-sm -> Serve para celulares pequenos
+
+Buttons
+btn -> Faz o elemento ja ficar com a propriedas de Buttons
+btn-lg faz ele ficar grandes
+btn-sm faz ele ficar pequeno
+btn-block faz ficar com o tamanho inteiro
+
+Margin e padding
+m -> margin, voce esolhe de uma valor de 1 a 5
+p - padding, voce escolhe uma valor de 1 a 5
+
+t -> top
+b -> bottom
+s -> left
+e -> right
+x -> left e right
+y -> top e bottom
+
+pe-5 padding de 5 na direcao da direita
